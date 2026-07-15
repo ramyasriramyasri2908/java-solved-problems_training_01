@@ -1,0 +1,124 @@
+//get 5 input from the users as a 5 sub marks and find total,percentage
+//without using loops
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int m1 = sc.nextInt();
+		int m2 = sc.nextInt();
+		int m3 = sc.nextInt();
+		int m4 = sc.nextInt();
+		int m5 = sc.nextInt();
+		int tot = m1+m2+m3+m4+m5;
+	  double  percentage = ((tot/500.0)*100);
+		System.out.println("Total: "+tot);
+		System.out.println("Percentage: "+percentage);
+    sc.close();
+	}
+}
+
+//add two numbers with temp variable
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2= sc.nextInt();
+		int temp;
+		System.out.println("Before Swapping: ");
+		System.out.println("Number 1 : "+num1);
+		System.out.println("Number 2 : "+num2);
+		temp=num1;
+		num1=num2;
+		num2=temp;
+		System.out.println("After Swapping: ");
+		System.out.println("Number 1 : "+num1);
+		System.out.println("Number 2 : "+num2);
+		sc.close();
+	}
+}
+
+//add two numbers without temp variable  
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2= sc.nextInt();
+		System.out.println("Before Swapping: ");
+		System.out.println("Number 1 : "+num1);
+		System.out.println("Number 2 : "+num2);
+		num1=num1^num2;
+		num2=num1^num2;
+		num1=num1^num2;
+		System.out.println("After Swapping: ");
+		System.out.println("Number 1 : "+num1);
+		System.out.println("Number 2 : "+num2);
+		sc.close();
+	}
+}
+
+//which operation to be done using switch
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Number 1: ");
+		int num1 = sc.nextInt();
+		System.out.println("Enter Number 2: ");
+        int num2= sc.nextInt();
+		System.out.println("Enter a opeartor: ");
+        char op = sc.next().charAt(0);
+		switch(op){
+		        case '+':
+		        System.out.println("Addition: "+(num1+num2));
+		        break;
+		        case '-':
+		        System.out.println("Subraction: "+(num1-num2));
+		        break;
+		        case '*':
+		        System.out.println("Multiplication: "+(num1*num2));
+		        break;
+		        case '/':
+		        System.out.println("Division: "+(num1/num2));
+		        break;
+		        case '%':
+		        System.out.println("Modulo: "+(num1%num2));
+		        break;
+		        default:
+		        System.out.println("Enter a valid operator");
+		        break;
+		}
+		
+		sc.close();
+	}
+}
+
+//electricity bill calculation
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Number of units: ");
+		int units = sc.nextInt();
+		double amt=0.0;
+		if(units<=50){
+		    amt=(units*0.5);
+		}else if(units<=150){
+		    amt=(50*0.5) + ((units - 50) * 1.0);
+		}else if(units<=250){
+		    amt=(50*0.5) + (100*1.0) + ((units - 150) * 1.2);
+		}else{
+		    amt=(50*0.5)+(100*1.0)+(100*1.2)+((units - 250)*1.5);
+		}
+		System.out.println("Total Bill: "+amt);
+		sc.close();
+	}
+}
+
